@@ -1,0 +1,8 @@
+<div class="wx-page">
+	<dl ng-repeat="top in buttonsData.button">
+		<dt class="text-ellipsis">{{top.name}}</dt>
+		<dd>
+			<a href="" class="text-ellipsis" ng-repeat="sub in top.sub_button">{{sub.name}}</a>
+		</dd>
+	</dl>
+</div>

@@ -1,0 +1,45 @@
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h3 class="panel-title">请在这里编辑您的菜单</h3>
+	</div>
+	<div class="panel-body">
+		<!--top menu starts-->
+		<div class="panel panel-success" ng-repeat="top in buttonsData.button">
+			<div class="panel-heading panel-heading-top">
+				<h3 class="panel-title">一级菜单</h3>
+				<span class="glyphicon glyphicon-remove-circle glyphicon-top" ng-click="removeTopMenu(top)"></span>
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<div class="row">
+						<label class="col-sm-2 control-label" for="">名称</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" ng-model="top.name">
+						</div>
+					</div>
+				</div>
+				<!--sub menu starts-->
+				<div class="panel panel-warning panel-sub" ng-repeat="sub in top.sub_button">
+					<div class="panel-heading panel-heading-sub">
+						<h3 class="panel-title">二级菜单</h3>
+						<span class="glyphicon glyphicon-remove-circle glyphicon-sub" ng-click="removeSubMenu(top, sub)"></span>
+					</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<div class="row">
+								<label class="col-sm-2 control-label" for="">名称</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" ng-model="sub.name">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--sub menu ends-->
+				<button type="button" class="btn btn-success" ng-click="addSubMenu(top)">添加二级菜单</button>
+			</div>
+		</div>
+		<!--top menu ends-->
+		<button type="button" class="btn btn-info" ng-click="addTopMenu()">添加一级菜单</button>
+	</div>
+</div>

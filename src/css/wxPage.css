@@ -1,0 +1,82 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: '微软雅黑';
+}
+li{
+	list-style: none;
+}
+#root{
+	display: flex;
+}
+wx-page{
+	width: 350px;
+	height: 600px;
+	margin: 20px;
+	background: url(../assets/5847cd3de91e7.png) -16px 0 / 379px 580px no-repeat;
+}
+wx-panel{
+	flex: 1;
+	border: 1px solid #ddd;
+	max-width: 600px;
+	min-height: 600px;
+	margin: 20px;
+	padding: 20px;
+}
+.wx-page{
+	display: flex;
+	width: 258px;
+	height: 492px;
+	margin: auto;
+}
+.wx-page dl{
+	display: flex;
+	flex-direction: column-reverse;
+	flex: 1;
+	margin: 0;
+	text-align: center;
+}
+.wx-page dl dt{
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ddd;
+	background: #f5f5f5;
+}
+.wx-page dl dd{
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #ddd;
+}
+.wx-page dl dd a{
+	border: 1px solid #ddd;
+	border-bottom: 0;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	text-decoration: none;
+	cursor: pointer;
+}
+.text-ellipsis{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.panel{
+	position: relative;
+}
+
+.glyphicon-remove-circle{
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	background-color: rgba(259,50,85,.5);
+	font-size: 16px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+.panel-heading-top:hover .glyphicon-top, .panel-heading-sub:hover .glyphicon-sub{
+	display: block;
+}
